@@ -5,7 +5,7 @@ export default ({ dispatch }) => next => action => {
     // Check if action has promise on its payload props
     // wait to resolve it if existing
     // send action on the next middleware if not
-debugger;
+
     if (!action.payload || !action.payload.then) { // make sure that no async/await from the action creator function
         return next(action);
     } 
