@@ -7,8 +7,8 @@ export function saveComment(comment) {
   };
 }
 
-export async function fetchComments() {
-  const comments = await fetch("http://jsonplaceholder.typicode.com/comments")
+export function fetchComments() {
+  const comments = fetch("http://jsonplaceholder.typicode.com/comments")
     .then((response) => response.json())
     .then((json) => {
       return json;
